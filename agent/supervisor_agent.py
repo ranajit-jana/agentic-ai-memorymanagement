@@ -14,9 +14,16 @@ to the right member agents autonomously.
 
 For structured triage (where deterministic, sequential output is required),
 the supervisor calls sub-agents' run() methods directly and aggregates results.
+
+Memory:
+    - db (SqliteDb)        → persists chat sessions and extracted memories to disk
+    - MemoryManager        → after each NL query, Gemini extracts key facts and stores them
+    - add_history_to_context → injects past conversation turns into every new prompt
+    - update_memory_on_run → automatically updates user memories after each team.run()
 """
 
 import pandas as pd
+from agno.memory import MemoryManager
 from agno.models.google import Gemini
 from agno.team import Team, TeamMode
 
@@ -25,14 +32,16 @@ from agent.intent_agent import IntentAgent
 from agent.policy_agent import PolicyAgent
 from agent.reply_agent import ReplyAgent
 from agent.search_agent import SearchAgent
+from memory.db import db          # shared SqliteDb — sessions + memories
 from config import GEMINI_MODEL
 
 
 class SupervisorAgent:
     """
-    Coordinates all sub-agents via an Agno Team.
+    Coordinates all sub-agents via an Agno Team with persistent memory.
     - Structured triage: calls each member agent's run() directly (deterministic order).
     - NL queries & reports: delegates to self.team.run() so Gemini routes autonomously.
+    - Memory: chat history and extracted facts are persisted across Streamlit reruns.
     """
 
     def __init__(self):
@@ -43,8 +52,7 @@ class SupervisorAgent:
         self.reply_agent     = ReplyAgent()
         self.search_agent    = SearchAgent()
 
-        # Register all sub-agents as members of an Agno Team.
-        # The team leader (Gemini) routes tasks to the right member for NL queries.
+        # Register all sub-agents as members of an Agno Team with memory.
         # mode=coordinate → leader picks the best member(s), crafts their sub-tasks,
         # and synthesises a final response.
         self.team = Team(
@@ -70,7 +78,14 @@ class SupervisorAgent:
                 "Synthesise member responses into a clear, concise final answer.",
             ],
             markdown=True,
-            add_member_tools_to_context=True,  # lets leader see what each member can do
+            add_member_tools_to_context=True,   # lets leader see what each member can do
+            # --- Agno Memory ---
+            db=db,                              # SQLite: persists sessions + memories to disk
+            memory_manager=MemoryManager(
+                model=Gemini(id=GEMINI_MODEL),  # uses Gemini to extract facts from conversations
+            ),
+            update_memory_on_run=True,          # save extracted memories after every team.run()
+            add_history_to_context=True,        # inject past turns into each new prompt
         )
 
     # ------------------------------------------------------------------

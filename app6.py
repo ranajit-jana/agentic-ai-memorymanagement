@@ -1,4 +1,5 @@
 import json
+import os
 import pandas as pd
 import streamlit as st
 
@@ -83,8 +84,8 @@ df: pd.DataFrame | None = st.session_state.uploaded_df
 # ══════════════════════════════════════════════════════════════════════════════
 # TABS
 # ══════════════════════════════════════════════════════════════════════════════
-tab1, tab2, tab3, tab4 = st.tabs(
-    ["📊 Dashboard", "🔍 Ticket Triage", "💬 Chat", "📋 Supervisor Insights"]
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    ["📊 Dashboard", "🔍 Ticket Triage", "💬 Chat", "📋 Supervisor Insights", "🧠 Memory"]
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -297,4 +298,105 @@ with tab4:
                 file_name="supervisor_report.json",
                 mime="application/json",
                 use_container_width=True,
+            )
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 5 — Memory Viewer
+# ─────────────────────────────────────────────────────────────────────────────
+with tab5:
+    st.header("Agent Memory")
+    st.caption(
+        "Facts extracted by the MemoryManager from past conversations. "
+        "These persist across sessions in `memory/triage_memory.db`."
+    )
+
+    import sqlite3 as _sqlite3
+    import json as _json
+    from datetime import datetime as _dt
+
+    _MEMORY_DB_PATH = "memory/triage_memory.db"
+
+    def _load_memories(keyword: str = "") -> list[dict]:
+        """Read memories directly from SQLite — bypasses Agno's SQLAlchemy reflection bug."""
+        if not os.path.exists(_MEMORY_DB_PATH):
+            return []
+        try:
+            conn = _sqlite3.connect(_MEMORY_DB_PATH)
+            cur  = conn.cursor()
+            cur.execute(
+                "SELECT memory_id, memory, topics, user_id, created_at "
+                "FROM agno_memories ORDER BY created_at DESC"
+            )
+            raw_rows = cur.fetchall()
+            conn.close()
+        except Exception:
+            return []
+
+        rows = []
+        for memory_id, memory, topics, user_id, created_at in raw_rows:
+            text        = _json.loads(memory) if memory else ""
+            topics_list = _json.loads(topics) if topics else []
+            if keyword and keyword.lower() not in text.lower():
+                continue
+            created = (
+                _dt.fromtimestamp(created_at).strftime("%Y-%m-%d %H:%M")
+                if created_at else "—"
+            )
+            rows.append({
+                "Memory":    text,
+                "Topics":    ", ".join(topics_list),
+                "User ID":   user_id or "—",
+                "Created":   created,
+                "Memory ID": memory_id or "—",
+            })
+        return rows
+
+    def _clear_memories() -> None:
+        """Delete all rows from agno_memories via raw sqlite3."""
+        conn = _sqlite3.connect(_MEMORY_DB_PATH)
+        conn.execute("DELETE FROM agno_memories")
+        conn.commit()
+        conn.close()
+
+    # ── Controls row ──────────────────────────────────────────────────────────
+    col_search, col_clear = st.columns([4, 1])
+    with col_search:
+        keyword = st.text_input(
+            "Search memories",
+            placeholder="e.g. refund, escalation, billing…",
+            label_visibility="collapsed",
+        )
+    with col_clear:
+        if st.button("🗑️ Clear All", use_container_width=True):
+            try:
+                _clear_memories()
+                st.success("All memories cleared.")
+                st.rerun()
+            except Exception as e:
+                st.error(f"Could not clear memories: {e}")
+
+    # ── Memory table ──────────────────────────────────────────────────────────
+    rows = _load_memories(keyword)
+
+    if not rows:
+        st.info(
+            "No memories stored yet. "
+            "Ask questions in the **Chat** tab — the agent will extract and save facts automatically."
+        )
+    else:
+        st.metric("Memories stored", len(rows))
+        mem_df = pd.DataFrame(rows)
+
+        # Show full memory text expanded, hide the ID column by default
+        st.dataframe(
+            mem_df[["Memory", "Topics", "User ID", "Created"]],
+            use_container_width=True,
+            hide_index=True,
+        )
+
+        with st.expander("Show Memory IDs"):
+            st.dataframe(
+                mem_df[["Memory ID", "Memory"]],
+                use_container_width=True,
+                hide_index=True,
             )

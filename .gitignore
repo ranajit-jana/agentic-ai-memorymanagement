@@ -43,6 +43,9 @@ Thumbs.db
 # Session state
 session_state.json
 
+# Agno memory database
+memory/triage_memory.db
+
 # Planning & internal docs
 plan.md
 implementation.txt

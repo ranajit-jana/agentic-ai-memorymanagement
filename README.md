@@ -43,6 +43,81 @@ SupportTriageWorkflow  (agent/workflow.py)
 
 ---
 
+## Memory System
+
+The system uses **Agno's built-in memory** backed by a local SQLite database (`memory/triage_memory.db`).
+
+### How it works
+
+```
+User asks a question (Tab 3 — Chat)
+        │
+        ▼
+team.run(query)
+        │
+        ├── add_history_to_context=True
+        │       Past N conversation turns are injected into the prompt.
+        │       The team leader "remembers" what was asked earlier in the session.
+        │
+        ├── Gemini routes to the right member agent(s)
+        │       e.g. "find refund complaints" → SearchAgent + PolicyAgent
+        │
+        ▼
+Response returned to user
+        │
+        ├── update_memory_on_run=True
+        │       MemoryManager (Gemini) reads the conversation and extracts
+        │       key facts, e.g. "user is investigating Feb refund spike"
+        │
+        ▼
+Facts written to SQLite (memory/triage_memory.db)
+        │
+        ▼
+Next conversation — extracted facts are recalled automatically
+```
+
+### Memory components
+
+| Component | Where configured | What it does |
+|---|---|---|
+| `SqliteDb` | `memory/db.py` | Single shared database file for all agents |
+| `MemoryManager` | `SupervisorAgent` Team | Uses Gemini to extract facts from conversations and store them |
+| `db=db` | `SupervisorAgent` Team + `ReplyAgent` | Links agent to the SQLite store for session + memory persistence |
+| `update_memory_on_run=True` | `SupervisorAgent` Team | Automatically saves extracted memories after every `team.run()` |
+| `add_history_to_context=True` | `SupervisorAgent` Team + `ReplyAgent` | Injects past conversation turns into every new prompt |
+
+### What gets stored
+
+| Data | Stored in | Lifespan |
+|---|---|---|
+| Full chat session (all turns) | SQLite `sessions` table | Persists across Streamlit reruns and server restarts |
+| Extracted facts / memories | SQLite `memories` table | Persists permanently until manually cleared |
+| Reply session history | SQLite `sessions` table | Allows ReplyAgent to avoid repeating itself in a session |
+
+### Which agents use memory
+
+| Agent | Memory | Why |
+|---|---|---|
+| `SupervisorAgent` (Team) | `db` + `MemoryManager` + history | Main conversation interface — needs full memory |
+| `ReplyAgent` | `db` + history | Avoids repeating identical replies in the same session |
+| `SentimentAgent` | None | Stateless — always called programmatically with a fresh ticket |
+| `IntentAgent` | None | Stateless — deterministic classification, no history needed |
+| `PolicyAgent` | None | Stateless — rule-based refund check + vector search |
+| `SearchAgent` | None | Stateless — pure vector DB lookup |
+
+### Memory database location
+
+```
+memory/
+├── __init__.py
+├── db.py               # SqliteDb(db_file="memory/triage_memory.db")
+└── triage_memory.db    # auto-created on first run (git-ignored)
+```
+
+> `triage_memory.db` is listed in `.gitignore` and will never be committed.
+
+---
+
 ## Tech Stack
 
 | Component | Technology |
@@ -87,6 +162,11 @@ agentic-ai-mod-6-assignment-1/
 │
 ├── session/
 │   └── state.py                      # JSON session save/restore
+│
+├── memory/
+│   ├── __init__.py                   # Exports shared db instance
+│   ├── db.py                         # SqliteDb(db_file="memory/triage_memory.db")
+│   └── triage_memory.db              # Auto-created on first run (git-ignored)
 │
 ├── sample_data/                      # Primary data files for ingestion
 │   ├── customer_support_tickets.csv  # 8469 ticket rows (17 cols)
@@ -256,6 +336,7 @@ for f in ['validation_data/tickets_electronics.csv',
 | `embeddings/embed.py` | Gemini batch embedding (dim=3072) |
 | `vectordb/pinecone_store.py` | Pinecone index + upsert + scoped search |
 | `session/state.py` | JSON session save/restore |
+| `memory/db.py` | Shared `SqliteDb` for Agno memory persistence |
 | `.env` | `GOOGLE_API_KEY`, `PINECONE_API_KEY` |
 
 ---
