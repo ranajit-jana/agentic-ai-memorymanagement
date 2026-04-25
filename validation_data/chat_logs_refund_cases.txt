@@ -1,0 +1,95 @@
+YNC Customer Support — Live Chat Transcripts
+Category: Refund & Return Cases
+Exported: 2024-03-01
+
+================================================================================
+CHAT SESSION #C-4421
+Date: 2024-02-12 | Channel: Website Chat | Agent: Neha M.
+Customer: Pradeep Kulkarni | Order: YNC-509871 | Product: Instant Pot Duo 7-in-1
+================================================================================
+
+[10:02] Neha M.: Hello! Welcome to YNC Support. How can I help you today?
+[10:02] Pradeep K.: Hi, I want to return my Instant Pot. It stopped working after 2 uses.
+[10:03] Neha M.: I'm sorry to hear that. Can I have your order ID please?
+[10:03] Pradeep K.: YNC-509871
+[10:04] Neha M.: Thank you. I can see the order placed on Feb 1st. Can you describe the issue?
+[10:04] Pradeep K.: It heats up but the lid lock doesn't engage. So I can't pressure cook at all.
+[10:05] Neha M.: That sounds like a manufacturing defect. Have you tried the troubleshooting steps in the manual?
+[10:05] Pradeep K.: Yes. Tried 3 times. Didn't help.
+[10:06] Neha M.: Understood. Since the purchase is within 30 days and the defect was present from early use, you qualify for a full refund or replacement. Which would you prefer?
+[10:07] Pradeep K.: Refund please. I don't want the same model again.
+[10:07] Neha M.: No problem. I'll raise the return pickup for tomorrow between 10am-1pm. Refund will hit your account in 5-7 business days after pickup.
+[10:08] Pradeep K.: That works. Will I get a confirmation?
+[10:08] Neha M.: Yes, you'll receive an SMS and email within the next 10 minutes.
+[10:09] Pradeep K.: Great. Thank you.
+[10:09] Neha M.: You're welcome. Is there anything else I can help with?
+[10:09] Pradeep K.: No, that's all.
+[10:09] Neha M.: Have a good day! Your reference number is REF-C-4421.
+CSAT Score: 5/5 | Resolution: Refund approved, pickup scheduled
+
+================================================================================
+CHAT SESSION #C-4487
+Date: 2024-02-18 | Channel: Mobile App Chat | Agent: Raj V.
+Customer: Sunaina Bhatia | Order: YNC-512345 | Product: Fitbit Charge 6
+================================================================================
+
+[14:30] Raj V.: Hi! I'm Raj from YNC Support. How can I assist you today?
+[14:30] Sunaina B.: I want to return my Fitbit. I ordered it 45 days ago.
+[14:31] Raj V.: I see. Our standard return window is 30 days. Your purchase was on Jan 4th, which is 45 days ago. Can you share the reason for the return?
+[14:32] Sunaina B.: The heart rate sensor is completely inaccurate. Reads 45 bpm when I'm walking briskly. That can't be right.
+[14:33] Raj V.: I understand your concern. Sensor accuracy issues can be covered under our defect policy even beyond 30 days. Let me check your order details.
+[14:34] Raj V.: I can see this is indeed a product defect situation. I'll escalate this to our quality team for a warranty replacement. This won't be a standard return but a warranty claim.
+[14:35] Sunaina B.: Can I not just get a refund? I've lost confidence in the product.
+[14:36] Raj V.: I completely understand. Let me check if a one-time exception can be made given the nature of the defect.
+[14:38] Raj V.: Good news. I've received approval for an exception refund given the sensor defect is a confirmed hardware issue. Refund will be processed to your original payment method.
+[14:38] Sunaina B.: Oh great! How long will it take?
+[14:39] Raj V.: 5-7 business days after we receive the product back. I'll schedule a free pickup for Feb 20th. Is that okay?
+[14:39] Sunaina B.: Yes, perfect. Thank you for being understanding.
+[14:40] Raj V.: Of course! You'll receive all details on email. Reference: REF-C-4487.
+CSAT Score: 4/5 | Resolution: Exception refund approved post-30-day window | Escalation: Quality team notified
+
+================================================================================
+CHAT SESSION #C-4512
+Date: 2024-02-21 | Channel: Website Chat | Agent: Meena P.
+Customer: Rajeev Saxena | Order: YNC-513900 | Product: Reebok Running Shoes
+================================================================================
+
+[11:15] Meena P.: Hello, welcome to YNC Support! How can I help you?
+[11:15] Rajeev S.: I received a completely different product. Ordered Reebok shoes but got some no-brand sandals.
+[11:16] Meena P.: Oh, I'm really sorry to hear that. That is absolutely not acceptable. Let me pull up your order.
+[11:16] Rajeev S.: Order YNC-513900.
+[11:17] Meena P.: I can see your order for Reebok Floatride Energy 5 shoes, size UK 9. You received sandals instead?
+[11:17] Rajeev S.: Yes. Some rubber sandals in a plastic bag. No brand, no invoice inside either.
+[11:18] Meena P.: This is a serious packing error on our end. I sincerely apologise. I'm raising a priority replacement right now. Your correct order will be dispatched within 24 hours with express delivery.
+[11:19] Rajeev S.: What about the sandals I received?
+[11:19] Meena P.: Please keep them — we won't arrange a return pickup for the wrong item. And as a token of apology, I'm adding a Rs 500 store credit to your account.
+[11:20] Rajeev S.: Ok. But I need the shoes before Friday for an event.
+[11:21] Meena P.: Understood. I've marked this as urgent. You should receive them by Feb 23rd (Thursday). I'll also send you live tracking.
+[11:22] Rajeev S.: Alright. Let's hope it works this time.
+[11:22] Meena P.: It will! I've personally flagged this order. Reference: REF-C-4512. Is there anything else?
+[11:22] Rajeev S.: No, thanks.
+CSAT Score: 3/5 | Resolution: Priority replacement + Rs 500 credit | Escalation: Warehouse packing error flagged to ops team
+
+================================================================================
+CHAT SESSION #C-4589
+Date: 2024-02-28 | Channel: Mobile App Chat | Agent: Arjun K.
+Customer: Deepa Nambiar | Order: YNC-519004 | Product: Nikon Z50 Camera
+================================================================================
+
+[09:00] Arjun K.: Good morning! Welcome to YNC Support. How may I help you?
+[09:01] Deepa N.: Good morning. I want to return my Nikon Z50. I changed my mind about it.
+[09:01] Arjun K.: Happy to help. Can I know when you purchased it?
+[09:01] Deepa N.: February 10th.
+[09:02] Arjun K.: That's 18 days ago — well within our 30-day return window. Any defects or issues with the product?
+[09:02] Deepa N.: No, it's in perfect condition. I just feel it's more camera than I need as a beginner.
+[09:03] Arjun K.: No problem at all. For a change of mind return, the product needs to be in original condition with all accessories and packaging. Is that the case?
+[09:03] Deepa N.: Yes, I haven't even fully opened the second lens box.
+[09:04] Arjun K.: Perfect. I'll schedule a return pickup. Once we receive and inspect the product, your refund of Rs 68,999 will be processed in 5-7 business days.
+[09:04] Deepa N.: Will the full amount be refunded? I paid by credit card.
+[09:05] Arjun K.: Yes, full amount to your credit card. For cameras above Rs 50,000 we also do a quick inspection call before final approval — you'll be contacted within 2 hours of pickup.
+[09:05] Deepa N.: That's fine. When can the pickup happen?
+[09:06] Arjun K.: Tomorrow, March 1st, between 2pm and 6pm. Does that work?
+[09:06] Deepa N.: Yes, that works.
+[09:07] Arjun K.: Great! Reference: REF-C-4589. You'll get a confirmation shortly. Anything else?
+[09:07] Deepa N.: No, that's all. Thank you.
+CSAT Score: 5/5 | Resolution: Change-of-mind return approved | Note: High-value item inspection protocol applied

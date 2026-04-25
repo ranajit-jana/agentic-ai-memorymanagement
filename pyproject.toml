@@ -1,0 +1,21 @@
+[project]
+name = "agentic-ai-mod-6-assignment-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "agno>=2.6.1",
+    "ddgs>=9.14.1",
+    "fastapi>=0.136.1",
+    "fpdf2>=2.8.7",
+    "google-genai>=1.73.1",
+    "numpy>=1.26.0",
+    "pandas>=2.0.0",
+    "pdfplumber>=0.10.0",
+    "pinecone>=8.1.2",
+    "python-dotenv>=1.0.0",
+    "sentence-transformers>=2.7.0",
+    "streamlit==1.35.0",
+    "wikipedia>=1.4.0",
+]

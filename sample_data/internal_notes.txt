@@ -1,0 +1,23 @@
+Agent: John | Date: 2024-03-10 | Ticket: #1021
+Customer called regarding a delayed shipment for order #ORD-8821. Stated the product was supposed to arrive within 3 days but it has been 10 days. Customer is frustrated. Escalated to logistics team. Advised customer to wait 48 hours for update.
+
+Agent: Sarah | Date: 2024-03-11 | Ticket: #1035
+Chat log: Customer reported that their account was locked after multiple failed login attempts. Walked customer through password reset flow. Issue resolved in 10 minutes. Customer satisfied.
+
+Agent: Mike | Date: 2024-03-12 | Ticket: #1047
+Customer called about a billing discrepancy. Was charged twice for the same order #ORD-9102. Verified duplicate charge in system. Initiated refund of $89.99. Advised customer refund will reflect in 5-7 business days.
+
+Agent: John | Date: 2024-03-13 | Ticket: #1058
+Customer emailed about a defective GoPro Hero camera received. Screen is cracked on arrival. Asked customer to send photos. Photos received and verified. Replacement order created. Original defective unit to be returned via prepaid label.
+
+Agent: Sarah | Date: 2024-03-14 | Ticket: #1072
+Customer complained about poor product quality for a laptop stand. Item wobbles and is unstable. Offered a replacement or full refund as per policy. Customer opted for refund. Refund of $45.00 processed.
+
+Agent: Mike | Date: 2024-03-15 | Ticket: #1089
+Customer reported that a promotional discount code was not applied at checkout. Order #ORD-9310 placed without 20% discount. Manually applied credit of $22.50 to customer account. Customer confirmed satisfaction.
+
+Agent: John | Date: 2024-03-16 | Ticket: #1103
+Customer requested cancellation of order #ORD-9450 placed 2 hours ago. Order was still in processing state. Cancellation successful. Full refund initiated. Customer thanked support team.
+
+Agent: Sarah | Date: 2024-03-17 | Ticket: #1115
+Customer raised concern about data privacy. Requested deletion of personal account data as per GDPR. Forwarded request to data compliance team. Informed customer of 30-day processing window.

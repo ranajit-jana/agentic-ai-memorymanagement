@@ -1,0 +1,111 @@
+YNC Customer Support — Escalation Case Notes
+Period: Q1 2024 (January – March)
+Maintained by: Escalation Desk Lead — Ramona D.
+
+================================================================================
+ESCALATION CASE #ESC-0101
+Date Opened: 2024-01-08 | Priority: Critical | Status: Resolved
+Customer: Vikram Choudhary | Product: Apple iPhone 15 Pro | Order: YNC-480021
+Reason for Escalation: Customer claims delivered phone has IMEI mismatch with invoice.
+================================================================================
+SUMMARY:
+Customer received the iPhone 15 Pro and noticed the IMEI on the device does not match the IMEI printed on the invoice and box. Customer is concerned about receiving a stolen or tampered device. Has threatened to file a police complaint.
+
+ACTION TAKEN:
+- Immediately escalated to Quality & Authenticity Team (QAT) on Jan 8.
+- QAT confirmed: IMEI mismatch due to a documentation error at the supplier end. Device is genuine.
+- Issued a corrected invoice with correct IMEI on Jan 10.
+- Offered Rs 1000 credit + extended warranty for inconvenience.
+- Customer accepted resolution. No police complaint filed.
+
+RESOLVED: 2024-01-10 | Resolution Time: 2 days
+ROOT CAUSE: Supplier packing documentation error — escalated to vendor management.
+
+================================================================================
+ESCALATION CASE #ESC-0128
+Date Opened: 2024-01-22 | Priority: High | Status: Resolved
+Customer: Meera Joshi | Product: Whirlpool Washing Machine | Order: YNC-491033
+Reason for Escalation: Product damaged during delivery. Customer rejected delivery. Refund delayed 3 weeks.
+================================================================================
+SUMMARY:
+Customer rejected the washing machine at the door as it arrived with a dented drum cover visible through the packaging tear. Delivery agent created a return note. However, refund was not processed after 3 weeks. Customer contacted support 4 times, each time told to wait 3-5 more business days.
+
+ACTION TAKEN:
+- Reviewed refund status — found stuck in reverse logistics system due to incomplete return note from delivery partner.
+- Manually overrode the system block and raised a priority refund on Jan 22.
+- Refund of Rs 32,500 processed same day.
+- Sent written apology from support manager.
+- Filed complaint with logistics partner for delivery damage and paperwork failure.
+
+RESOLVED: 2024-01-22 | Resolution Time: Same day (post escalation) | Total wait time before escalation: 21 days
+ROOT CAUSE: Delivery partner's incomplete reverse logistics documentation. Logistics SLA review initiated.
+
+================================================================================
+ESCALATION CASE #ESC-0145
+Date Opened: 2024-02-05 | Priority: Critical | Status: Under Review
+Customer: Suresh Natarajan | Product: Multiple orders (6 items) | Order IDs: YNC-501xxx series
+Reason for Escalation: Customer alleges account was hacked, orders placed without consent. Disputes Rs 1.2 lakh in charges.
+================================================================================
+SUMMARY:
+Customer reported that 6 high-value orders were placed from their account on Feb 3rd. Customer was travelling and did not place these orders. All orders shipped to a different delivery address. Customer's credit card was also charged. Total disputed amount: Rs 1,19,450.
+
+ACTION TAKEN:
+- Account immediately suspended pending investigation on Feb 5.
+- All 6 orders placed on hold (3 already shipped, 3 in warehouse).
+- Cybersecurity & Fraud team notified.
+- Coordinating with logistics to intercept the 3 shipped orders.
+- Payment team reviewing chargeback process with customer's bank.
+- Customer advised to file a complaint with cyber crime cell.
+
+STATUS AS OF 2024-03-01: 2 of 3 shipped orders intercepted. 1 delivered to fraud address — police complaint filed by YNC. Refund for 5 orders processed. 1 order refund pending bank chargeback confirmation.
+ROOT CAUSE: Account password compromise via phishing link. Security team sent advisory email to all customers.
+
+================================================================================
+ESCALATION CASE #ESC-0162
+Date Opened: 2024-02-14 | Priority: High | Status: Resolved
+Customer: Anita Sharma | Product: Dyson Airwrap | Order: YNC-506712
+Reason for Escalation: Customer received empty box. Alleges item was stolen in transit.
+================================================================================
+SUMMARY:
+Customer opened the Dyson Airwrap delivery box to find it empty except for some crumpled paper. The outer box was sealed with YNC tape and showed no signs of tampering externally. Customer took unboxing video. Highly distressed. Product cost: Rs 37,900.
+
+ACTION TAKEN:
+- Reviewed customer's unboxing video — clearly shows empty box.
+- Checked warehouse dispatch CCTV footage for order YNC-506712. Footage confirmed product was packed and sealed correctly at warehouse.
+- Evidence points to tampering during transit by third-party logistics.
+- Replacement unit dispatched immediately on Feb 15 without waiting for investigation to close.
+- FIR filed by YNC's legal team against the logistics partner.
+- Customer received replacement on Feb 17.
+
+RESOLVED: 2024-02-17 | Resolution Time: 3 days
+ROOT CAUSE: Transit theft by logistics personnel. Partner contract reviewed.
+
+================================================================================
+ESCALATION CASE #ESC-0189
+Date Opened: 2024-03-02 | Priority: Medium | Status: Open
+Customer: Raj Malhotra | Product: Bosch Dishwasher | Order: YNC-520045
+Reason for Escalation: Installation service missed three scheduled appointments. Customer work disrupted.
+================================================================================
+SUMMARY:
+Customer purchased a Bosch dishwasher with paid installation add-on. Three installation appointments were scheduled (Feb 20, Feb 24, Feb 28) and all three were missed with no prior notice from the installation team. Customer had to take time off work each time. Now demanding compensation in addition to installation.
+
+ACTION TAKEN:
+- Escalated to installation partner operations head on March 2.
+- Fourth appointment confirmed with supervisor-level oversight for March 5.
+- Refund of installation charge (Rs 1,200) processed as compensation.
+- Additional Rs 500 store credit issued.
+
+PENDING: Confirm successful installation on March 5. Update customer post-installation. File service failure report against installation partner.
+
+================================================================================
+ESCALATION SUMMARY — Q1 2024:
+Total Escalations: 47
+Resolved within SLA: 39 (83%)
+Critical cases: 11
+Top escalation reasons:
+  1. Logistics & delivery failures (18 cases — 38%)
+  2. Fraud & account security (8 cases — 17%)
+  3. Refund processing delays (12 cases — 26%)
+  4. Product authenticity concerns (9 cases — 19%)
+Avg resolution time: 3.2 days (target: 2 days)
+Action item: Logistics partner SLA renegotiation scheduled for April 2024.

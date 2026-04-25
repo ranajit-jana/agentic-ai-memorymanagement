@@ -1,0 +1,42 @@
+YNC Customer Support — Internal Agent Notes
+Month: January 2024
+Compiled by: Support Team Lead
+
+---
+
+[2024-01-03 | Agent: Priya S. | Ticket #1012 | Customer: Rahul Mehta]
+Customer called about a delayed shipment for a Boat Airdopes order placed on Dec 28. Checked with logistics — shipment stuck at Pune warehouse due to local strike. Informed customer. Offered 10% next-order coupon as goodwill. Customer accepted. Follow-up scheduled for Jan 6.
+
+[2024-01-05 | Agent: Deepak R. | Ticket #1034 | Customer: Asha Iyer]
+Refund request for a damaged Samsung TV. Customer sent photos — clearly crushed corner. Approved immediate replacement without requiring return since reverse logistics cost would exceed product value. Replacement order raised: YNC-RX-1034. Communicated 3-5 day delivery window.
+
+[2024-01-07 | Agent: Shalini T. | Ticket #1045 | Customer: Vinod Tiwari]
+Customer frustrated — third call about the same billing issue. Previous agents had escalated but no resolution. I personally called the payments team. Root cause: merchant ID mismatch causing double charge. Payments team confirmed reversal in 48 hours. Sent confirmation SMS to customer. Customer satisfaction very low — noted for QA review.
+
+[2024-01-10 | Agent: Priya S. | Ticket #1059 | Customer: Meena Das]
+Product inquiry about whether Philips mixer can handle coconut grinding. Confirmed with product team — Philips HL7756 can handle hard ingredients up to 3 minutes per session. Shared product spec sheet with customer. No further action needed.
+
+[2024-01-14 | Agent: Arjun K. | Ticket #1078 | Customer: Suresh Patil]
+Customer wants to cancel a large order (5 items, total Rs 45,000). Order not yet shipped. Cancellation approved per policy. Full refund initiated. Customer mentioned they found all 5 items cheaper on a competitor site. Flagged to pricing team for review.
+
+[2024-01-17 | Agent: Deepak R. | Ticket #1092 | Customer: Lata Nair]
+Escalated ticket — customer threatening legal action over a counterfeit suspicion on Nike shoes received. Forwarded photos to quality team. Quality team confirmed shoes are genuine but from an older batch with different box printing. Customer not satisfied. Offered full refund plus Rs 500 credit. Customer agreed to not pursue further.
+
+[2024-01-20 | Agent: Shalini T. | Ticket #1105 | Customer: Amit Bansal]
+Password reset issue — customer locked out of account after 5 failed attempts. OTP not reaching registered mobile (old number). Verified identity via email + date of birth. Updated mobile number in system. Account unlocked. Advised customer to update contact details in profile settings.
+
+[2024-01-23 | Agent: Arjun K. | Ticket #1120 | Customer: Reena Choudhary]
+Post-delivery complaint — refrigerator delivered but installation team did not show up on scheduled date. Coordinated with logistics partner. Installation rescheduled for Jan 25. Offered Rs 300 coupon for inconvenience. Customer still unhappy about the delay. CSAT score expected to be low.
+
+[2024-01-27 | Agent: Priya S. | Ticket #1139 | Customer: Nikhil Sharma]
+Customer asking about warranty status for a Lenovo laptop purchased 11 months ago. Verified purchase date. Warranty valid until next month. Advised customer to raise warranty claim before expiry if they have ongoing issues. Shared warranty claim process document.
+
+[2024-01-30 | Agent: Deepak R. | Ticket #1152 | Customer: Kavitha Rao]
+Bulk order query for office supplies. Customer wants to place corporate order worth Rs 2 lakh. Transferred to B2B sales team as per protocol. Left note in CRM for B2B team to follow up within 24 hours.
+
+---
+NOTES FOR TEAM:
+- January saw a spike in delayed delivery complaints due to the Pune warehouse disruption (Jan 1-5). Total impacted: ~180 tickets.
+- Counterfeit product allegations up 30% this month — quality team to review supplier batches.
+- OTP delivery failures trending up — technical team notified on Jan 22.
+- Average resolution time this month: 28 hours (target: 24 hours). Needs improvement.
